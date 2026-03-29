@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan Arreglos - Sastrería y Composturas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #1a2e44;
+            --brand-gold: #c5a059;
+            --brand-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: white;
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+
+        .nav-scrolled {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .service-card:hover {
+            border-color: var(--brand-gold);
+            transform: translateY(-5px);
+        }
+
+        .btn-primary {
+            background-color: var(--brand-blue);
+            color: white;
+            transition: opacity 0.3s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        @keyframes stitchLine {
+            0% { stroke-dashoffset: 100; }
+            100% { stroke-dashoffset: 0; }
+        }
+
+        .stitch-anim {
+            stroke-dasharray: 10;
+            animation: stitchLine 2s linear infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="serif text-2xl font-bold text-[var(--brand-blue)]">
+            Hassan <span class="text-[var(--brand-gold)]">Arreglos</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wider">
+            <a href="#inicio" class="hover:text-[var(--brand-gold)] transition-colors">Inicio</a>
+            <a href="#servicios" class="hover:text-[var(--brand-gold)] transition-colors">Servicios</a>
+            <a href="#nosotros" class="hover:text-[var(--brand-gold)] transition-colors">Experiencia</a>
+            <a href="#contacto" class="hover:text-[var(--brand-gold)] transition-colors">Contacto</a>
+        </div>
+        <a href="tel:625590240" class="btn-primary px-5 py-2 rounded text-sm font-semibold">Llamar ahora</a>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="relative min-h-[90vh] flex items-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover opacity-10" alt="[Mesa de trabajo de sastre]">
+        </div>
+        <div class="container mx-auto px-6 md:px-12 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-widest rounded mb-6 text-center sm:text-left">Tu taller de costura en Santa Coloma</span>
+                <h1 class="serif text-5xl md:text-7xl text-[var(--brand-blue)] mb-8 leading-tight text-center sm:text-left">
+                    Arreglos de ropa con <i class="font-normal">cuidado y detalle.</i>
+                </h1>
+                <p class="text-lg text-gray-600 mb-10 leading-relaxed max-w-xl text-center sm:text-left">
+                    Con más de 40 años de experiencia, Hassan ofrece un servicio de costura tradicional. Arreglamos tus prendas favoritas para que te sigan quedando como el primer día.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+                    <a href="#contacto" class="btn-primary px-8 py-4 rounded font-bold text-center">Dónde estamos</a>
+                    <a href="#servicios" class="border border-gray-300 px-8 py-4 rounded font-bold text-center hover:bg-gray-50 transition-colors">Ver servicios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-24 bg-[var(--brand-light)]">
+        <div class="container mx-auto px-6 md:px-12 text-center mb-16">
+            <h2 class="serif text-4xl text-[var(--brand-blue)] mb-4">Lo que hacemos por ti</h2>
+            <div class="w-20 h-1 bg-[var(--brand-gold)] mx-auto"></div>
+        </div>
+        <div class="container mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-8">
+            <div class="service-card bg-white p-10 rounded-xl shadow-sm text-center">
+                <div class="w-12 h-12 bg-blue-50 flex items-center justify-center rounded-lg mb-6 mx-auto text-2xl">👖</div>
+                <h3 class="serif text-2xl mb-4">Arreglos diarios</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Expertos en bajos de pantalones, vaqueros, estrechar cinturas y ajustar faldas o vestidos.</p>
+            </div>
+            <div class="service-card bg-white p-10 rounded-xl shadow-sm text-center">
+                <div class="w-12 h-12 bg-blue-50 flex items-center justify-center rounded-lg mb-6 mx-auto text-2xl">🧥</div>
+                <h3 class="serif text-2xl mb-4">Chaquetas y Abrigos</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Corte de mangas, entallado lateral y refuerzo de costuras para que tus prendas de invierno luzcan perfectas.</p>
+            </div>
+            <div class="service-card bg-white p-10 rounded-xl shadow-sm text-center">
+                <div class="w-12 h-12 bg-blue-50 flex items-center justify-center rounded-lg mb-6 mx-auto text-2xl">🧵</div>
+                <h3 class="serif text-2xl mb-4">Cremalleras y más</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Cambiamos cremalleras en chaquetas y pantalones, reponemos botones y realizamos costuras de refuerzo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="nosotros" class="py-24 px-6 md:px-12">
+        <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="bg-gray-100 rounded-2xl p-12 aspect-square flex items-center justify-center relative overflow-hidden">
+                    <svg viewBox="0 0 200 200" class="w-64 h-64">
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#ddd" stroke-width="2" stroke-dasharray="1 10" />
+                        <path d="M50 100 Q 100 20 150 100 T 50 100" fill="none" stroke="var(--brand-gold)" stroke-width="3" class="stitch-anim" />
+                        <rect x="98" y="40" width="4" height="60" fill="#333" rx="2">
+                            <animateTransform attributeName="transform" type="translate" values="0 0; 0 20; 0 0" dur="1s" repeatCount="indefinite" />
+                        </rect>
+                    </svg>
+                    <div class="absolute bottom-8 right-8 text-right">
+                        <span class="text-7xl font-bold text-[var(--brand-blue)] block">40</span>
+                        <span class="text-sm font-bold uppercase text-[var(--brand-gold)] tracking-widest">Años de Oficio</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="serif text-4xl text-[var(--brand-blue)] mb-8">Artesanía en cada puntada.</h2>
+                <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                    Hassan ha dedicado décadas al manejo de la aguja y la máquina de coser. En nuestro taller, cada prenda se trata con el respeto que merece, buscando siempre la mejor solución técnica.
+                </p>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Somos un negocio local de confianza en Santa Coloma, conocido por un trato amable y un trabajo bien hecho a precios razonables.
+                </p>
+                <div class="flex gap-12">
+                    <div>
+                        <div class="text-2xl font-bold text-[var(--brand-blue)]">Rápido</div>
+                        <div class="text-xs text-gray-400 uppercase font-bold">Entrega puntual</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-[var(--brand-blue)]">Calidad</div>
+                        <div class="text-xs text-gray-400 uppercase font-bold">Hecho a mano</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación y Mapa -->
+    <section id="contacto" class="py-24 bg-[var(--brand-blue)] text-white">
+        <div class="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 mb-16">
+            <div>
+                <h2 class="serif text-4xl mb-8 text-white">Ven a visitarnos</h2>
+                <div class="space-y-6 mb-12">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-6 h-6 text-[var(--brand-gold)] text-xl">📍</div>
+                        <div>
+                            <p class="font-bold">Dirección</p>
+                            <p class="text-blue-100 italic">Carrer del Rellotge, 28<br>08923 Santa Coloma de Gramenet</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-6 h-6 text-[var(--brand-gold)] text-xl">🕒</div>
+                        <div>
+                            <p class="font-bold">Horario</p>
+                            <p class="text-blue-100">Lunes a Sábado: 10:00 - 14:00 | 17:00 - 20:30<br>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 p-6 bg-white/5 rounded-xl border border-white/10">
+                    <div class="w-12 h-12 rounded-full bg-[var(--brand-gold)] flex items-center justify-center text-2xl text-[var(--brand-blue)]">📞</div>
+                    <div>
+                        <p class="text-xs text-white/60 uppercase font-bold tracking-widest">Llámanos</p>
+                        <p class="text-xl font-bold">625 59 02 40</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/5 p-10 rounded-2xl backdrop-blur-sm border border-white/10 h-full">
+                <h3 class="serif text-2xl mb-6 text-[var(--brand-gold)]">Tu taller de confianza</h3>
+                <ul class="space-y-4 text-blue-100 text-sm">
+                    <li>• Arreglos de todo tipo de ropa.</li>
+                    <li>• Servicio de planchado para tus prendas.</li>
+                    <li>• Consultas y presupuestos en el momento.</li>
+                    <li>• Trato familiar y cercano.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 h-[450px]">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d157.7513993690363!2d2.2199354104000357!3d41.44900314183153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bd421a1bf8c5%3A0x2b30cdfc4b703c20!2sHassan%20Arreglos%20de%20Ropa%20%26%20Sastrer%C3%ADa!5e1!3m2!1ses!2ses!4v1774789869420!5m2!1ses!2ses" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="mt-4 text-center">
+                <a href="https://maps.app.goo.gl/8qgGzQDJ7kENnY7Q9" target="_blank" class="text-sm text-blue-200 hover:text-[var(--brand-gold)] transition-colors underline">Abrir directamente en Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-400 text-xs border-t border-gray-100 uppercase tracking-widest">
+        &copy; 2026 Hassan Arreglos - Santa Coloma de Gramenet
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
